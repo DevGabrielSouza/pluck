@@ -9,7 +9,7 @@ description = "Interface desktop pro yt-dlp, feita com PySide6 e QML"
 requires-python = ">=3.12"
 license = "Unlicense"
 license-files = ["LICENSE", "pluck/icons/LICENSE-lucide"]
-dependencies = ["PySide6>=6.10"]
+dependencies = ["PySide6>=6.12.0"]
 
 [project.scripts]
 pluck = "pluck.app:main"
