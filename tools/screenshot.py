@@ -32,12 +32,14 @@ from pluck.presentation.desktop import Desktop  # noqa: E402
 from pluck.presentation.downloads import DownloadManager  # noqa: E402
 from pluck.presentation.settings import Settings  # noqa: E402
 
-FIXTURES = PROJECT_ROOT / "tests" / "fixtures"
+FIXTURES = PROJECT_ROOT / "tools" / "showcase"
 SCENARIOS = ("idle", "video", "audio", "playlist", "error", "loading", "settings", "empty")
+SHOWCASE_VIDEO = json.loads((FIXTURES / "video.json").read_text())
+SHOWCASE_PLAYLIST = json.loads((FIXTURES / "playlist.json").read_text())
 SCENARIO_URLS = {
-    "video": "https://www.youtube.com/watch?v=fOT0BUpITw8&list=PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI",
-    "audio": "https://www.youtube.com/watch?v=fOT0BUpITw8&list=PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI",
-    "playlist": "https://www.youtube.com/playlist?list=PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI",
+    "video": f"{SHOWCASE_VIDEO['webpage_url']}&list={SHOWCASE_PLAYLIST['id']}",
+    "audio": f"{SHOWCASE_VIDEO['webpage_url']}&list={SHOWCASE_PLAYLIST['id']}",
+    "playlist": SHOWCASE_PLAYLIST["webpage_url"],
     "error": "https://www.youtube.com/watch?v=abc",
     "loading": "https://www.youtube.com/watch?v=abc",
 }
@@ -45,9 +47,9 @@ SCENARIO_URLS = {
 
 def scenario_result(scenario: str) -> ProbeResult | None:
     if scenario in ("video", "audio"):
-        return json.loads((FIXTURES / "modern_video.json").read_text())
+        return SHOWCASE_VIDEO
     if scenario == "playlist":
-        return json.loads((FIXTURES / "playlist.json").read_text())
+        return SHOWCASE_PLAYLIST
     if scenario == "error":
         return Failure(
             "O YouTube pediu login pra liberar o vídeo. Ative os cookies do navegador em Configurações.",
@@ -76,7 +78,7 @@ class FixtureProbe:
 
 
 def sample_jobs(folder: str) -> list[DownloadJob]:
-    playlist = json.loads((FIXTURES / "playlist.json").read_text())["entries"]
+    playlist = SHOWCASE_PLAYLIST["entries"]
 
     def job(index: int, status: Status, options: DownloadOptions, **fields) -> DownloadJob:
         entry = playlist[index]
