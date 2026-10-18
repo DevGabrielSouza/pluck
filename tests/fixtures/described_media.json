@@ -1,0 +1,355 @@
+{
+ "modern_video": {
+  "described": {
+   "audioFormats": [
+    {
+     "label": "MP3",
+     "size": 7166250,
+     "sizeText": "≈ 6,8 MB",
+     "value": "mp3"
+    },
+    {
+     "label": "M4A",
+     "size": 3791401,
+     "sizeText": "≈ 3,6 MB",
+     "value": "m4a"
+    },
+    {
+     "label": "Opus",
+     "size": 3947045,
+     "sizeText": "≈ 3,8 MB",
+     "value": "opus"
+    }
+   ],
+   "channel": "Peso Pluma",
+   "dateText": "08/12/2023",
+   "defaultQuality": 1080,
+   "duration": 234,
+   "durationText": "3:54",
+   "entries": [],
+   "extractor": "Youtube",
+   "hasVideo": true,
+   "isLive": false,
+   "kind": "video",
+   "partOfPlaylist": true,
+   "qualities": [
+    {
+     "label": "Melhor",
+     "size": 550258387,
+     "sizeMkv": 550414031,
+     "sizeMkvText": "≈ 525 MB",
+     "sizeText": "≈ 525 MB",
+     "value": 0
+    },
+    {
+     "label": "4K",
+     "size": 550258387,
+     "sizeMkv": 550414031,
+     "sizeMkvText": "≈ 525 MB",
+     "sizeText": "≈ 525 MB",
+     "value": 2160
+    },
+    {
+     "label": "1440p",
+     "size": 182289350,
+     "sizeMkv": 182444994,
+     "sizeMkvText": "≈ 174 MB",
+     "sizeText": "≈ 174 MB",
+     "value": 1440
+    },
+    {
+     "label": "1080p",
+     "size": 103330291,
+     "sizeMkv": 103485935,
+     "sizeMkvText": "≈ 98,7 MB",
+     "sizeText": "≈ 98,5 MB",
+     "value": 1080
+    },
+    {
+     "label": "720p",
+     "size": 42486635,
+     "sizeMkv": 42642279,
+     "sizeMkvText": "≈ 40,7 MB",
+     "sizeText": "≈ 40,5 MB",
+     "value": 720
+    },
+    {
+     "label": "480p",
+     "size": 24962492,
+     "sizeMkv": 25118136,
+     "sizeMkvText": "≈ 24,0 MB",
+     "sizeText": "≈ 23,8 MB",
+     "value": 480
+    },
+    {
+     "label": "360p",
+     "size": 17402128,
+     "sizeMkv": 17557772,
+     "sizeMkvText": "≈ 16,7 MB",
+     "sizeText": "≈ 16,6 MB",
+     "value": 360
+    },
+    {
+     "label": "240p",
+     "size": 10599250,
+     "sizeMkv": 10754894,
+     "sizeMkvText": "≈ 10,3 MB",
+     "sizeText": "≈ 10,1 MB",
+     "value": 240
+    }
+   ],
+   "thumbnail": "https://i.ytimg.com/vi/fOT0BUpITw8/maxresdefault.jpg",
+   "title": "BELLAKEO (Video Oficial) - Peso Pluma, Anitta",
+   "totalCount": 1,
+   "url": "https://www.youtube.com/watch?v=fOT0BUpITw8",
+   "viewsText": "769 mi visualizações"
+  },
+  "quality": 1080,
+  "url": "https://www.youtube.com/watch?v=fOT0BUpITw8&list=PL1"
+ },
+ "playlist": {
+  "described": {
+   "audioFormats": [
+    {
+     "label": "MP3",
+     "size": 0,
+     "sizeText": "",
+     "value": "mp3"
+    },
+    {
+     "label": "M4A",
+     "size": 0,
+     "sizeText": "",
+     "value": "m4a"
+    },
+    {
+     "label": "Opus",
+     "size": 0,
+     "sizeText": "",
+     "value": "opus"
+    }
+   ],
+   "channel": "Music",
+   "defaultQuality": 0,
+   "entries": [
+    {
+     "channel": "Peso Pluma",
+     "duration": 235,
+     "durationText": "3:55",
+     "thumbnail": "https://i.ytimg.com/vi/fOT0BUpITw8/mqdefault.jpg",
+     "title": "BELLAKEO (Video Oficial) - Peso Pluma, Anitta",
+     "url": "https://www.youtube.com/watch?v=fOT0BUpITw8"
+    },
+    {
+     "channel": "Arcangel",
+     "duration": 650,
+     "durationText": "10:50",
+     "thumbnail": "https://i.ytimg.com/vi/NFvDHYMzj9U/mqdefault.jpg",
+     "title": "Arcángel - FN8 ( Video Lyric )",
+     "url": "https://www.youtube.com/watch?v=NFvDHYMzj9U"
+    },
+    {
+     "channel": "Becky G",
+     "duration": 235,
+     "durationText": "3:55",
+     "thumbnail": "https://i.ytimg.com/vi/8c7KOGxeY3w/mqdefault.jpg",
+     "title": "Becky G - POR EL CONTRARIO (Performance Video) ft. Ángela Aguilar, Leonardo Aguilar",
+     "url": "https://www.youtube.com/watch?v=8c7KOGxeY3w"
+    },
+    {
+     "channel": "Real Boston Richey",
+     "duration": 212,
+     "durationText": "3:32",
+     "thumbnail": "https://i.ytimg.com/vi/jWdxXdp8sZI/mqdefault.jpg",
+     "title": "Real Boston Richey - The Type (Official Music Video) ft. YTB Fatt",
+     "url": "https://www.youtube.com/watch?v=jWdxXdp8sZI"
+    },
+    {
+     "channel": "Xavi Oficial",
+     "duration": 173,
+     "durationText": "2:53",
+     "thumbnail": "https://i.ytimg.com/vi/s6cdjJvGM2o/mqdefault.jpg",
+     "title": "La Diabla",
+     "url": "https://www.youtube.com/watch?v=s6cdjJvGM2o"
+    },
+    {
+     "channel": "Drake",
+     "duration": 293,
+     "durationText": "4:53",
+     "thumbnail": "https://i.ytimg.com/vi/w1-jss2mZlY/mqdefault.jpg",
+     "title": "Drake - You Broke My Heart",
+     "url": "https://www.youtube.com/watch?v=w1-jss2mZlY"
+    },
+    {
+     "channel": "Finesse2Tymes",
+     "duration": 189,
+     "durationText": "3:09",
+     "thumbnail": "https://i.ytimg.com/vi/885j2xO9VB8/mqdefault.jpg",
+     "title": "Finesse2Tymes - Crazy [Official Music Video]",
+     "url": "https://www.youtube.com/watch?v=885j2xO9VB8"
+    },
+    {
+     "channel": "NLE CHOPPA",
+     "duration": 162,
+     "durationText": "2:42",
+     "thumbnail": "https://i.ytimg.com/vi/muzQ0r14L2Y/mqdefault.jpg",
+     "title": "NLE Choppa - Shotta Flow 7 “FINAL” (Official Music Video)",
+     "url": "https://www.youtube.com/watch?v=muzQ0r14L2Y"
+    },
+    {
+     "channel": "Anuel AA",
+     "duration": 600,
+     "durationText": "10:00",
+     "thumbnail": "https://i.ytimg.com/vi/p9JAt53TSWE/mqdefault.jpg",
+     "title": "Anuel AA - Arcangel Es Chota (Audio)",
+     "url": "https://www.youtube.com/watch?v=p9JAt53TSWE"
+    },
+    {
+     "channel": "Nicki Minaj",
+     "duration": 181,
+     "durationText": "3:01",
+     "thumbnail": "https://i.ytimg.com/vi/nW9tEGI2e-k/mqdefault.jpg",
+     "title": "Everybody",
+     "url": "https://www.youtube.com/watch?v=nW9tEGI2e-k"
+    },
+    {
+     "channel": "42 dugg Music",
+     "duration": 153,
+     "durationText": "2:33",
+     "thumbnail": "https://i.ytimg.com/vi/fHXhhJTRkQQ/mqdefault.jpg",
+     "title": "42 Dugg - SpinDatBac (Official Music Video)",
+     "url": "https://www.youtube.com/watch?v=fHXhhJTRkQQ"
+    },
+    {
+     "channel": "BANGTANTV",
+     "duration": 230,
+     "durationText": "3:50",
+     "thumbnail": "https://i.ytimg.com/vi/O1d2DYZZrek/mqdefault.jpg",
+     "title": "정국 (Jung Kook), USHER ‘Standing Next to You - USHER Remix’ Official Performance Video",
+     "url": "https://www.youtube.com/watch?v=O1d2DYZZrek"
+    }
+   ],
+   "extractor": "YoutubeTab",
+   "hasVideo": true,
+   "kind": "playlist",
+   "qualities": [
+    {
+     "label": "Melhor",
+     "size": 0,
+     "sizeText": "",
+     "value": 0
+    },
+    {
+     "label": "4K",
+     "size": 0,
+     "sizeText": "",
+     "value": 2160
+    },
+    {
+     "label": "1440p",
+     "size": 0,
+     "sizeText": "",
+     "value": 1440
+    },
+    {
+     "label": "1080p",
+     "size": 0,
+     "sizeText": "",
+     "value": 1080
+    },
+    {
+     "label": "720p",
+     "size": 0,
+     "sizeText": "",
+     "value": 720
+    },
+    {
+     "label": "480p",
+     "size": 0,
+     "sizeText": "",
+     "value": 480
+    },
+    {
+     "label": "360p",
+     "size": 0,
+     "sizeText": "",
+     "value": 360
+    }
+   ],
+   "thumbnail": "https://i.ytimg.com/vi/fOT0BUpITw8/mqdefault.jpg",
+   "title": "Popular Music Videos",
+   "totalCount": 182,
+   "url": "https://www.youtube.com/playlist?list=PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI"
+  },
+  "quality": 0,
+  "url": "https://www.youtube.com/playlist?list=PL1"
+ },
+ "single_video": {
+  "described": {
+   "audioFormats": [
+    {
+     "label": "MP3",
+     "size": 581875,
+     "sizeText": "≈ 568 KB",
+     "value": "mp3"
+    },
+    {
+     "label": "M4A",
+     "size": 309288,
+     "sizeText": "≈ 302 KB",
+     "value": "m4a"
+    },
+    {
+     "label": "Opus",
+     "size": 309288,
+     "sizeText": "≈ 302 KB",
+     "value": "opus"
+    }
+   ],
+   "channel": "jawed",
+   "dateText": "24/04/2005",
+   "defaultQuality": 240,
+   "duration": 19,
+   "durationText": "0:19",
+   "entries": [],
+   "extractor": "Youtube",
+   "hasVideo": true,
+   "isLive": false,
+   "kind": "video",
+   "partOfPlaylist": false,
+   "qualities": [
+    {
+     "label": "Melhor",
+     "size": 1009829,
+     "sizeMkv": 1009829,
+     "sizeMkvText": "≈ 986 KB",
+     "sizeText": "≈ 986 KB",
+     "value": 0
+    },
+    {
+     "label": "240p",
+     "size": 1009829,
+     "sizeMkv": 1009829,
+     "sizeMkvText": "≈ 986 KB",
+     "sizeText": "≈ 986 KB",
+     "value": 240
+    },
+    {
+     "label": "144p",
+     "size": 640757,
+     "sizeMkv": 640757,
+     "sizeMkvText": "≈ 626 KB",
+     "sizeText": "≈ 626 KB",
+     "value": 144
+    }
+   ],
+   "thumbnail": "https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG-AoAC8AGKAgwIABABGFUgWShlMA8=&rs=AOn4CLA9eLBatYv9WbkD4BbZ2Im-biSPTw",
+   "title": "Me at the zoo",
+   "totalCount": 1,
+   "url": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+   "viewsText": "445 mi visualizações"
+  },
+  "quality": 720,
+  "url": "https://example.com/v"
+ }
+}
