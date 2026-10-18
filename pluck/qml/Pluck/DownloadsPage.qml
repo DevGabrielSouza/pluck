@@ -15,15 +15,15 @@ Item {
     Shortcut {
         sequences: [StandardKey.Paste]
         enabled: root.visible && !root.textInputFocused && !errorDialog.opened
-        onActivated: composer.pasteAndAnalyze()
+        onActivated: composerPanel.pasteAndAnalyze()
     }
 
     Shortcut {
         sequence: "Ctrl+L"
         enabled: root.visible && !errorDialog.opened
         onActivated: {
-            composer.urlField.forceActiveFocus()
-            composer.urlField.selectAll()
+            composerPanel.urlField.forceActiveFocus()
+            composerPanel.urlField.selectAll()
         }
     }
 
@@ -43,14 +43,14 @@ Item {
 
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                contentHeight: composer.implicitHeight
+                contentHeight: composerPanel.implicitHeight
                 clip: true
                 boundsBehavior: Flickable.StopAtBounds
 
                 ScrollBar.vertical: AppScrollBar {}
 
                 Composer {
-                    id: composer
+                    id: composerPanel
 
                     onOpenSettings: root.openSettings()
 
@@ -59,10 +59,10 @@ Item {
             }
 
             DownloadBar {
-                visible: composer.ready
+                visible: composerPanel.ready
                 Layout.fillWidth: true
-                Layout.rightMargin: composer.width < composerScroll.width ? 12 : 0
-                composer: composer
+                Layout.rightMargin: composerPanel.width < composerScroll.width ? 12 : 0
+                composer: composerPanel
             }
         }
 

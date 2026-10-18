@@ -5,7 +5,7 @@ import Pluck
 import Pluck.Core
 
 ApplicationWindow {
-    id: window
+    id: appWindow
 
     property int currentPage: 0
     property bool closeConfirmed: false
@@ -37,19 +37,19 @@ ApplicationWindow {
     Shortcut {
         sequence: "Ctrl+1"
         enabled: !quitDialog.opened
-        onActivated: window.currentPage = 0
+        onActivated: appWindow.currentPage = 0
     }
 
     Shortcut {
         sequence: "Ctrl+,"
         enabled: !quitDialog.opened
-        onActivated: window.currentPage = 1
+        onActivated: appWindow.currentPage = 1
     }
 
     Shortcut {
         sequence: StandardKey.Quit
         enabled: !quitDialog.opened
-        onActivated: window.close()
+        onActivated: appWindow.close()
     }
 
     Connections {
@@ -57,10 +57,10 @@ ApplicationWindow {
 
         function onJobFinished(jobId, title, status) {
             if (status === "completed")
-                Toasts.show("ok", "Download concluído", title, "Abrir", () => window.openDownloadedFile(Downloads.filePath(jobId)))
+                Toasts.show("ok", "Download concluído", title, "Abrir", () => appWindow.openDownloadedFile(Downloads.filePath(jobId)))
             else if (status === "failed")
                 Toasts.show("err", "Download falhou", title, "Ver fila", () => {
-                    window.currentPage = 0
+                    appWindow.currentPage = 0
                     Downloads.view.group = "failed"
                 })
         }
@@ -70,9 +70,9 @@ ApplicationWindow {
         id: frame
 
         anchors.fill: parent
-        radius: window.maximized ? 0 : 12
+        radius: appWindow.maximized ? 0 : 12
         color: Theme.bg
-        border.width: window.maximized ? 0 : 1
+        border.width: appWindow.maximized ? 0 : 1
         border.color: Theme.borderStrong
 
         ColumnLayout {
@@ -82,18 +82,18 @@ ApplicationWindow {
 
             Topbar {
                 Layout.fillWidth: true
-                window: window
-                currentPage: window.currentPage
-                onNavigate: page => window.currentPage = page
+                window: appWindow
+                currentPage: appWindow.currentPage
+                onNavigate: page => appWindow.currentPage = page
             }
 
             StackLayout {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                currentIndex: window.currentPage
+                currentIndex: appWindow.currentPage
 
                 DownloadsPage {
-                    onOpenSettings: window.currentPage = 1
+                    onOpenSettings: appWindow.currentPage = 1
                 }
 
                 SettingsPage {}
@@ -131,14 +131,14 @@ ApplicationWindow {
         confirmText: "Fechar mesmo assim"
         destructive: true
         onConfirmed: {
-            window.closeConfirmed = true
-            window.close()
+            appWindow.closeConfirmed = true
+            appWindow.close()
         }
     }
 
     ResizeHandles {
         anchors.fill: parent
-        visible: !window.maximized
-        window: window
+        visible: !appWindow.maximized
+        window: appWindow
     }
 }

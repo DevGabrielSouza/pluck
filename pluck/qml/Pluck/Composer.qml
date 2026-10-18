@@ -10,8 +10,8 @@ Card {
 
     property string clipboardUrl
     property string dismissedClipboard
-    property alias urlField: urlField
-    property alias formatOptions: formatOptions
+    property alias urlField: urlInput
+    property alias formatOptions: formatPicker
 
     readonly property var result: Analyzer.result
 
@@ -25,7 +25,7 @@ Card {
         const url = Desktop.normalizeUrl(text)
         if (url === "")
             return
-        urlField.text = url
+        urlInput.text = url
         clipboardUrl = ""
         Analyzer.analyze(url)
     }
@@ -34,29 +34,29 @@ Card {
         const text = Desktop.clipboardText()
         if (text !== "")
             analyze(text)
-        urlField.forceActiveFocus()
+        urlInput.forceActiveFocus()
     }
 
     function checkClipboard() {
         const text = Desktop.clipboardText()
         const candidate = Desktop.looksLikeUrl(text) ? Desktop.normalizeUrl(text) : ""
-        const alreadyUsed = candidate === urlField.text || candidate === Analyzer.url || candidate === dismissedClipboard
+        const alreadyUsed = candidate === urlInput.text || candidate === Analyzer.url || candidate === dismissedClipboard
         clipboardUrl = alreadyUsed ? "" : candidate
     }
 
     function resetOptions() {
-        formatOptions.mode = result.hasVideo === false ? "audio" : AppSettings.defaultMode
-        formatOptions.quality = result.defaultQuality !== undefined ? result.defaultQuality : 0
-        formatOptions.container = AppSettings.defaultContainer
-        formatOptions.audioFormat = AppSettings.defaultAudioFormat
+        formatPicker.mode = result.hasVideo === false ? "audio" : AppSettings.defaultMode
+        formatPicker.quality = result.defaultQuality !== undefined ? result.defaultQuality : 0
+        formatPicker.container = AppSettings.defaultContainer
+        formatPicker.audioFormat = AppSettings.defaultAudioFormat
     }
 
     function startDownload() {
         const options = {
-            mode: formatOptions.mode,
-            quality: formatOptions.quality,
-            container: formatOptions.container,
-            audioFormat: formatOptions.audioFormat
+            mode: formatPicker.mode,
+            quality: formatPicker.quality,
+            container: formatPicker.container,
+            audioFormat: formatPicker.audioFormat
         }
         const entries = isPlaylist ? playlist.selectedEntries() : [{
             url: result.url,
@@ -73,21 +73,21 @@ Card {
         }
         Downloads.view.group = "all"
         Toasts.show("info", added === 1 ? "Adicionado à fila" : added + " vídeos adicionados à fila", result.title)
-        urlField.text = ""
+        urlInput.text = ""
         Analyzer.clear()
     }
 
     title: "Novo download"
     subtitle: "Vídeo, playlist ou canal de qualquer site suportado"
     iconName: "link"
-    active: urlField.activeFocus || dropArea.containsDrag
+    active: urlInput.activeFocus || dropArea.containsDrag
 
     headerActions: IconButton {
         visible: Analyzer.state !== "idle"
         iconName: "x"
         hint: "Limpar"
         onClicked: {
-            urlField.text = ""
+            urlInput.text = ""
             Analyzer.clear()
         }
     }
@@ -133,7 +133,7 @@ Card {
             spacing: 8
 
             AppTextField {
-                id: urlField
+                id: urlInput
 
                 Layout.fillWidth: true
                 large: true
@@ -160,8 +160,8 @@ Card {
                 iconName: Analyzer.state === "loading" ? "" : "arrow-right"
                 loading: Analyzer.state === "loading"
                 hint: Analyzer.state === "loading" ? "Cancelar análise" : "Analisar link (Enter)"
-                enabled: urlField.text.trim() !== "" || Analyzer.state === "loading"
-                onClicked: Analyzer.state === "loading" ? Analyzer.cancel() : root.analyze(urlField.text)
+                enabled: urlInput.text.trim() !== "" || Analyzer.state === "loading"
+                onClicked: Analyzer.state === "loading" ? Analyzer.cancel() : root.analyze(urlInput.text)
             }
         }
     }
@@ -480,7 +480,7 @@ Card {
     }
 
     FormatOptions {
-        id: formatOptions
+        id: formatPicker
 
         visible: root.ready
         Layout.fillWidth: true
